@@ -3,6 +3,7 @@
 *.mo
 *~
 .ve
+.env
 *.pyc
 __pycache__
 media

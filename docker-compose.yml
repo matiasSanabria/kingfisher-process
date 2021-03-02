@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  process:
+    build: .
+    environment:
+      - FLASK_APP=ocdskingfisherprocess.web.app
+      - FLASK_ENV=development
+      - KINGFISHER_API_KEY=1234
+      - KINGFISHER_PROCESS_DB_URI='postgres://empatia:empatia@localhost:6000/empatia'
+    ports:
+      - "5000:5000"
+  redis:
+    image: "redis:alpine"
